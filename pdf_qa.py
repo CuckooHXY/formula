@@ -285,7 +285,7 @@ def generate_label(model, query:list, sample_pdf, output_file:str):
 
 3. **确认可行性**  
    - 若论文中确实存在可回答该问题的内容，则需提取原文中的相关内容。在答案中仅保留原文内容（可作少量必要的衔接性编辑，但不改变原意），尽量避免额外添加未在原文出现的内容或描述。并且在答案最后表明答案的来源（evidence：答案在论文中的位置）。
-   - 若论文中没有任何与问题相关的内容，认为问题答案为“NO ANSWER.”，并在最后标注“evidence: NO EVIDENCE”, 即整体答案为“NO ANSWER.\nevidence: NO EVIDENCE”。 
+   - 若论文中没有任何与问题相关的内容，认为问题答案为“NO ANSWER.”，并在最后标注“evidence: NO EVIDENCE”, 即提取的答案为“NO ANSWER.\nevidence: NO EVIDENCE”。 
 
 在提取答案时，请注意以下要求：  
 - **完备性**：提取的答案内容需涵盖论文中解决问题所需的所有相关步骤和细节。  
