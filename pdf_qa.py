@@ -269,7 +269,7 @@ def generate_label(model, query:list, sample_pdf, output_file:str):
 1. **公式相关键（“formula”、“lemma”、“theorem”等）**，表示数学表达式的类别；值为从论文中提取出的 LaTeX 格式数学表达式；   
 2. **query**，值为大模型根据论文与该数学表达式生成的问题。
 
-请根据下列步骤与要求，对该数据集进行处理。
+请根据下列步骤与要求，对该数据集进行处理，不要遗漏数据。。
 
 ---
 
@@ -314,6 +314,7 @@ def generate_label(model, query:list, sample_pdf, output_file:str):
 ---
 
 ### 注意：
+- 不要遗漏数据。
 - 请严格遵照以上要求，避免缺少任何关键内容。  
 - 确保输出文本中无错误或不完整之处。  
 - 在输出答案中仅保留原文内容（可作少量必要的衔接性编辑，但不改变原意），尽量避免额外添加未在原文出现的内容或描述。
