@@ -11,36 +11,38 @@ import time
 
 
 
-def extract_formula(model, sample_pdf):
+def extract_formula(model, sample_pdf, output_file):
     prompt1 = """阅读这篇论文，然后：
 
-    1.  **公式识别：** 
-        *   找出论文中出现的所有数学公式、定理、引理和推论。
-        *   对于没有明确类型标识的公式（即没有 "定理"、"引理"、"推论" 等关键词），统一归类为 "formula"。
-        *   **需要识别以下类型的公式：**
-            *   **带有编号的公式：** 
-            *   **单独成行的公式：**  例如，在论文中单独占据一行或多行的公式。
-        *   **忽略以下类型的公式：**
-            *   **在段落中间出现的而且没有单独成行、也没有编号的公式。**
-        *   确保结果中不包含重复的公式（重复指 LaTeX 转换后完全相同的公式。若同一内容在论文中以不同编号出现，视为相同公式）。
+1.  **公式识别：** 
+    *   找出论文中出现的所有数学公式、定理、引理和推论。保留公式的编号。
+    *   对于没有明确类型标识的公式（即没有 "定理"、"引理"、"推论" 等关键词），统一归类为 "formula"。
+    *   **需要识别以下类型的公式：**
+        *   **带有编号的公式：**  保留公式的编号。
+        *   **单独成行的公式：**  例如，在论文中单独占据一行或多行的公式。保留公式的编号（如果存在编号）。
+    *   **忽略以下类型的公式：**
+        *   **在段落中间出现的而且没有单独成行、也没有编号的公式。**
+    *   确保结果中不包含重复的公式（重复指 LaTeX 转换后完全相同的公式。若同一内容在论文中以不同编号出现，视为相同公式）。
 
-    2.  **LaTeX 转换：** 将第一步中找到的公式转换为 LaTeX 格式的字符串。
-        *   **符号:** 准确转换数学符号。
-        *   **上下标:** 正确识别和转换上下标。
-        *   **大小写:** 保持变量和常量的大小写一致。
-        *   **公式结构:** 保持公式的完整结构。
-        *   **公式编号:** 保留公式的编号（如果有的话）。
-        *   **斜体:** 文本中斜体的变量，用 LaTeX 的 `\\textit{}` 包裹。
-        *   **数学环境:** 行内公式使用 `$ ... $` 包裹，行间公式使用 `$$ ... $$` 包裹。
-        *   **补充条件:** 查看紧跟在公式后面的论文内容是不是有对公式出现的符号的定义或说明，比如"where X is ..."。
+2.  **LaTeX 转换：** 将第一步中找到的公式转换为 LaTeX 格式的字符串。
+    *   **公式编号:** 保留公式的编号（如果存在）。
+    *   **Formula numbering:** Retain the formula’s number (if any)。
+    *   **符号:** 准确转换数学符号。
+    *   **上下标:** 正确识别和转换上下标。
+    *   **大小写:** 保持变量和常量的大小写一致。
+    *   **公式结构:** 保持公式的完整结构。
+    *   **斜体:** 文本中斜体的变量，用 LaTeX 的 `\\textit{}` 包裹。
+    *   **数学环境:** 行内公式使用 `$ ... $` 包裹，行间公式使用 `$$ ... $$` 包裹。
+    *   **补充条件:** 查看紧跟在公式后面的论文内容是不是有对公式出现的符号的定义或说明，比如"where X is ..."。
 
-    3.  **JSONL 输出：** 将所有转换后的 LaTeX 格式字符串以多行 JSONL 格式输出，方便逐行解析。每行都是一个 JSON 对象，其中 key 为公式的类型（如 "formula", "lemma", "theorem", "corollary" 等），value 为对应的 LaTeX 转换得到的字符串，注意按照第2步的要求！
+3.  **JSONL 输出：** 将所有转换后的 LaTeX 格式字符串以多行 JSONL 格式输出，方便逐行解析。每行都是一个 JSON 对象，其中 key 为公式的类型（如 "formula", "lemma", "theorem", "corollary" 等），value 为对应的 LaTeX 转换得到的字符串，注意按照第2步的要求！
 
-    确保公式和原文完全一致！"""
+保留公式的编号（如果存在）。
+确保公式和原文完全一致！"""
     prompt1 = """Read the paper, then:
 
 1. Formula Recognition:
-- Identify all mathematical formulas, theorems, lemmas, and corollaries in the paper.
+- Identify all mathematical formulas, theorems, lemmas, and corollaries in the paper. Especially Numbered formulas.Retain the formula’s number (if any).
 - For formulas without explicit labels (i.e., those not labeled as "theorem," "lemma," or "corollary"), classify them as "formula."
 - Required types of formulas to recognize:
     - Numbered formulas.
@@ -78,6 +80,10 @@ Ensure the formulas are exactly the same as in the original text!"""
         except json.JSONDecodeError as e:
             continue
     print("the number of formulas/theorems: "+str(len(latex_formulas)))
+    with open(output_file, 'w', encoding='utf-8') as file:
+        for item in latex_formulas:
+            file.write(item + '\n')
+    assert 0
     # assert 0
     return latex_formulas
     formulas = "\n".join(latex_formulas)
@@ -241,8 +247,6 @@ and it is explained that this formula is derived from Formula 3, $KL(\\pi_r(y|x)
 {"query":"Based on Formula 3: $KL(\\pi_r(y|x) || \\pi_{ref}(y|x)) \\leq \\epsilon$, how can we derive Formula: $\\pi_r(y | x) = \\frac{1}{Z(x)} \\pi_{ref}(y | x) \\exp (\\frac{1}{\\beta} r(x, y))$?"}
 
 The dataset is as follows:\n""" + chunk# Notes:Ensure the output is in JSONL format! If the generated questions include mathematical formulas, convert them into LaTeX format. Ensure the formulas are consistent with the original text, including the correct symbols, subscripts, superscripts, and case sensitivity.
-        # pompt2 = "阅读这篇论文，其中包含的数学公式、定理、引理、推论（以下统称为公式）如下：\n" + chunk + "\n我需要你帮助我做如下事情：\n\n第一步：你需要阅读这篇论文，找到该公式第一次出现的位置。结合论文上下文，找出证明这个公式所需要的“前提条件”，“前提条件”包括：这个公式是从哪个（哪些）公式得到的、相关问题设定、字符意义等。\n\n第二步，根据这些前提条件，询问怎么推导出来该公式，或者询问如何证明该定理/引理/推论，如：如何证明公式X成立？怎么从公式X推导出公式Y？。\n如果生成的问题中涉及到公式，请列出原公式内容（不要只写出引用序号）。\n\n第三步，将第二步中生成的问题和对应的公式进行一一对应的匹配，每一对作为一条数据，以jsonl的形式输出。其中每条数据为一个dict，包含2个key:value对。第一个key为公式类型，如\"formula\"、\"lemma\"、\"theorem\"等，value为latex格式的公式。第二个key为\"query\"，value为第二步生成的问题。\n\n注意以jsonl的形式输出！\n注意，如果生成的问题中包含数学公式形式的内容，请将其转化为latex格式（保证公式和原文相符！注意符号！注意上下标！注意大小写！"#question
-        # prompt2 = "Read this paper, which includes mathematical formulas, theorems, lemmas, and corollaries (hereafter collectively referred to as formulas) as follows:\n" + chunk + "\nI need you to help me with the following tasks:\n\nStep 1: For each formula, generate questions that inquire about how the formula (or theorem, lemma, corollary, etc.) is derived, proven, or deduced.\nYou need to identify the necessary prerequisites for proving this formula from the paper (e.g., other required formulas, relevant problem settings, meanings of the symbols involved). Based on these prerequisites and the formula itself, pose questions about the process of proving or deriving the formula. The questions should mainly include two parts: 1. The prerequisites found(e.g., other required formulas, relevant problem settings, meanings of the symbols involved). 2. Ask how to derive the formula from these prerequisites, or how to prove the theorem/lemma/corollary, such as: \"How to prove Formula X is valid?\" or \"How to deduce Formula Y from Formula X?\".\nIf the generated question involves formulas, please write out the original formula (do not just reference it by citation number)!\nNote: If the generated question includes mathematical formulas, ensure that they are converted into LaTeX format (make sure the formulas match the original text precisely! Pay attention to symbols, subscripts, superscripts, and case sensitivity!).\n\nStep 2: Match each formula with the corresponding question generated in Step 1, pairing them as a single data item. Output each pair in JSONL format.\nEach data item should be a dictionary with two key-value pairs: The first key is the type of formula, such as \"formula\", \"lemma\", \"theorem\", etc., with the value being the formula in LaTeX format. The second key is \"query\", with the value being the question generated in Step 1.\n\nEnsure the output is in JSONL format!"#question
         response2 = model.generate_content([sample_pdf, prompt2], generation_config=genai.types.GenerationConfig(temperature=0.0,),request_options={"timeout": 600})
         for line in response2.text.splitlines():
             try:
@@ -281,11 +285,12 @@ def generate_label(model, query:list, sample_pdf, output_file:str):
 
 3. **确认可行性**  
    - 若论文中没有任何与问题相关的内容，你可以跳过这个表达式，继续下一个。 
-   - 若论文中确实存在可回答该问题的内容，则需提取原文中的相关内容。在答案中仅保留原文内容（可作少量必要的衔接性编辑，但不改变原意），尽量避免额外添加未在原文出现的内容或描述.
+   - 若论文中确实存在可回答该问题的内容，则需提取原文中的相关内容。在答案中仅保留原文内容（可作少量必要的衔接性编辑，但不改变原意），尽量避免额外添加未在原文出现的内容或描述。并且在答案最后表明答案的来源（evidence：答案所在位置）。
 
 在提取答案时，请注意以下要求：  
 - **完备性**：提取的答案内容需涵盖论文中解决问题所需的所有相关步骤和细节。  
-- **一致性**：在答案中仅保留原文内容（可作少量必要的衔接性编辑，但不改变原意），尽量避免额外添加未在原文出现的内容或描述。  
+- **一致性**：在答案中仅保留原文内容（可作少量必要的衔接性编辑，但不改变原意），尽量避免额外添加未在原文出现的内容或描述。
+- **evidence**：在答案最后表明答案的来源（evidence：答案所在位置）。
 - **引用处理**：若答案中引用了论文中的其它公式、定理，请同时将其原始内容包含在推导或证明过程中，而不仅仅保留编号或标签。  
 - **LaTeX 转换**：请确保所有数学表达式均转为与原文一致的 LaTeX 格式，包括：  
   - 符号、上下标及大小写的准确性；  
@@ -296,6 +301,7 @@ def generate_label(model, query:list, sample_pdf, output_file:str):
 ---
 
 ### 第二步：  
+**JSONL 输出：** 将第一步中提取的答案以多行 JSONL 格式输出，方便逐行解析。每行都是一个 JSON 对象，其中 key 为`whole_label`，value 第一步中从论文中提取的 LaTeX 格式的答案内容，在答案最后表明答案的来源（evidence：答案所在位置）；
 将第一步中提取的答案与数据集中对应的记录进行匹配，并在该记录中新增一个键值对，形成新的数据条目。具体要求如下：  
 
 - 在每条原有数据的基础上新增一个键为 `whole_label`，其值即为第一步中从论文中提取的、含 LaTeX 格式的答案内容；    
@@ -309,6 +315,7 @@ def generate_label(model, query:list, sample_pdf, output_file:str):
 1. **多行 JSONL 格式**：每条数据一行。  
 2. **内容准确性**：公式须与论文原文完全一致，所有符号、上下标与大小写的转换必须正确。 
 3. **内容一致性**：在答案中仅保留原文内容（可作少量必要的衔接性编辑，但不改变原意），尽量避免额外添加未在原文出现的内容或描述。
+4. **evidence**：在答案最后表明答案的来源（evidence：答案所在位置）。
 
 ---
 
@@ -397,24 +404,29 @@ if __name__ == '__main__':
 #     recipe_name: str
 #     ingredients: list[str]
     start = time.time()
+    output_dir = "E:\\dmt\\formula\\generated\\1-8"
     parser = argparse.ArgumentParser()
-    parser.add_argument('--pdf_path', type=str, default="E:\dmt\\formula\Direct Preference Optimization--Your Language Model is Secretly a Reward Mode.pdf", help='the input file path')
+    parser.add_argument('--pdf_path', type=str, default="E:\dmt\\formula\papers\diffcsp.pdf", help='the input file path')
     parser.add_argument('--model_name', type=str, default="gemini-2.0-flash-exp", help='the gemini model you want to use.')
-    parser.add_argument('--output_jsonl_path', type=str, default="E:\\dmt\\formula\\generated\\25-1-6\\api_dpo_label.jsonl", help='output path')
+    parser.add_argument('--output_jsonl_path', type=str, default="E:\\dmt\\formula\\generated\\1-8\\api_dpo_label.jsonl", help='output path')
     args = parser.parse_args()
+    args.output_jsonl_path = os.path.join(output_dir, "api_"+args.pdf_path.split('\\')[-1][:-4]+"_label.jsonl")
     print("pdf: " + args.pdf_path)
     print("model: " + args.model_name)
     print("output_jsonl_path: " + args.output_jsonl_path)
 
     genai.configure(api_key="AIzaSyC3hUut2AKGPAsRE7MN-s0LecjOEdg2bcg")
     model = genai.GenerativeModel(args.model_name)
-    model3 = genai.GenerativeModel("gemini-2.0-flash-thinking-exp")
+    # model3 = genai.GenerativeModel("gemini-2.0-flash-thinking-exp")
     sample_pdf = genai.upload_file(args.pdf_path)
     prepare = time.time()
-    formulas = extract_formula(model, sample_pdf)
+    formula_path = os.path.join(output_dir, "api_"+args.pdf_path.split('\\')[-1][:-4]+"_formula.jsonl")
+    print(formula_path)
+    formulas = extract_formula(model, sample_pdf, formula_path)
     formulas_time = time.time()
     # qa = generate_question_label(formulas, args.output_jsonl_path, sample_pdf)
-    query = generate_query(model, formulas, sample_pdf, args.output_jsonl_path)
+    query_path = os.path.join(output_dir, "api_"+args.pdf_path.split('\\')[-1][:-4]+"_query.jsonl")
+    query = generate_query(model, formulas, sample_pdf, query_path)
     query_time = time.time()
     label = generate_label(model, query, sample_pdf, args.output_jsonl_path)
     label_time = time.time()
@@ -423,29 +435,3 @@ if __name__ == '__main__':
     print(f"Time to generate queries: {query_time - formulas_time:.2f} seconds")
     print(f"Time to generate labels: {label_time - query_time:.2f} seconds")
     print(f"Total time elapsed: {label_time - start:.2f} seconds")
-
-
-# def generate_question_label(latex_formulas:list, output_file:str, sample_pdf):
-#     qa=[]
-#     for i in range(0, len(latex_formulas), 20):
-#         chunk = "\n".join(latex_formulas[i:i+20])
-#         prompt2 = "阅读这篇论文，其中包含的数学公式、定理、引理、推论（以下统称为公式）如下：\n" + chunk + "\n我需要你帮助我做如下事情：\n第一步，对每一条公式数据，判断论文是否对它进行了证明或者推导（首先通过找出它在论文中第一次出现的位置，结合该位置上下文判断；然后查看附录是否存在对该公式的证明或者推导，进行二次确认）。如果存在证明或推导过程，则将该内容提取出来。如果证明过程中引用了论文中的其他公式、定理等，请找到被引用的原始内容（而不仅仅是参考编号或代码），并将其纳入到证明或推导过程中。将里面的数学公式推导部分转化成latex格式。（这一步很重要，请不要遗漏任何一条数学公式、定理、引理、推论的证明或者推导过程）；若无证明或推导过程则回到第一步进行对下一条公式的处理。\n第二步，根据第一步提取到的证明或推导过程，找出证明这个公式所需要的的前提条件（例如所需要的其他公式，涉及到的相关问题设定、字符意义）。再结合论文内容（尤其是该公式第一次出现的位置附近的上下文），对前提条件进行补充。根据这些前提条件，结合公式本身，对这个公式的证明或者推导过程进行提问，生成问题，问题主要包括两部分内容：1.找到的前提条件。2.询问根据这些前提条件，怎么推导出来该公式，或者询问如何证明该定理/引理/推论，需要列出该公式。如果生成的问题中有引用论文中其他公式定理等，找到被引用内容并放入生成的问题中，并且将问题里面的数学公式推导部分转化成latex格式。\n第三步，将第二步中生成的问题，和第一步中提取的的证明推导过程进行一一对应的匹配，每一对作为一条数据，以jsonl的形式输出。其中每条数据为一个dict，包含3个key:value对。第一个key为公式类型，如'formula'、'lemma'、'theorem'等，value为latex格式的公式。第二个key为\"question\"，value为第二步生成的问题。第三个key为\"whole_label\"，value为第一步提取到的包含latex格式内容的证明/推导过程。\n\n仅输出在第一步找到了证明或推导过程的数据！注意保证公式和原文相符！注意符号！注意上下标！注意大小写！以jsonl的形式输出！"
-#         prompt2 = "Read this paper, which contains mathematical formulas, theorems, lemmas, and inferences (hereinafter collectively referred to as formulas) as follows:\n" + chunk + "\nHelp me with the following tasks:\nStep 1: For each formula, determine whether the paper provides a proof or derivation (first locate where it initially appears in the paper, check the surrounding context, and then confirm by reviewing the appendix for any proofs or derivations). If there is a proof or derivation, extract that content. If there is a proof or derivation process, extract that content. If the proof references other formulas, theorems, etc., in the paper, locate the original referenced content (not just the reference numbers or codes) and include it in the proof or derivation, and convert all the mathematical derivations within it into LaTeX format. (This step is very important—do not omit the proof or derivation of any formula, theorem, lemma, or corollary!) If there is no proof or derivation, proceed to the next formula and repeat.\nStep 2: Based on the proofs or derivations extracted in Step 1, identify the prerequisites needed to prove that formula (for example, other required formulas, relevant problem settings, the meaning of symbols). Then, supplement these prerequisites with details from the paper’s context (especially near the formula’s first appearance). Using these prerequisites and the formula itself, pose a question asking how to derive the formula or how to prove the theorem/lemma/corollary. The question should include two parts: (1) the identified prerequisites, and (2) an inquiry about how to derive or prove the formula. If the generated question references other formulas, theorems, etc., include these references in the question and convert any formulas in the question into LaTeX format as well. \nStep 3: Match each of the questions generated in Step 2 with the corresponding proof/derivation content extracted in Step 1, forming one data item per matched pair. Output each data item in JSONL format, where each item is a dictionary containing three keys: 1.The first key is the formula type (e.g., 'formula', 'lemma', or 2.'theorem') with the LaTeX-formatted formula as its value.2.The second key is \"question\" with the question generated in Step 2 as its value. 3.The third key is \"whole_label\" with the proof/derivation (including LaTeX-formatted content) extracted in Step 1 as its value. \n\nOnly output the items for which a proof or derivation was found in Step 1! Make sure the formulas and original text match exactly, pay attention to symbols, subscripts, superscripts, and case sensitivity, and output in JSONL format!\n Please review the proof process before outputting! If the proof references other formulas, theorems, etc., from the paper, please locate the original content being referenced (not just the reference number or code) and incorporate it into the proof or derivation process!"
-#         response2 = model.generate_content([prompt2, sample_pdf], generation_config=genai.types.GenerationConfig(temperature=0.0,),request_options={"timeout": 600})
-#         for line in response2.text.splitlines():
-#             try:
-#                 json_obj = json.loads(line)
-#                 if not line in qa:
-#                     qa.append(line)
-#             except json.JSONDecodeError as e:
-#                 continue
-#     with open(output_file, 'w', encoding='utf-8') as file:
-#         for item in qa:
-#             file.write(item + '\n')
-#     return qa
-
-
-# prompt2 = "阅读这篇论文，其中包含的数学公式、定理、引理、推论（以下统称为公式）如下：\n" + "\n".join(latex_formulas) +  "\n我需要你帮助我做如下事情：\n第一步，对每一条公式数据，判断论文是否对它进行了证明或者推导（首先通过找出它在论文中第一次出现的位置，结合该位置上下文判断；然后查看附录是否存在对该公式的证明或者推导，进行二次确认）。若有证明或推导过程，则将该内容提取出来，并且将里面的数学公式推导部分转化成latex格式（这一步很重要，请不要遗漏任何一条数学公式、定理、引理、推论的证明或者推导过程）；若无证明或推导过程则回到第一步进行对下一条公式的处理。\n第二步，根据第一步提取到的证明或推导过程，找出证明这个公式的前提条件（如其他公式，相关问题设定，字符意义），结合论文内容（尤其是第一次出现的位置附近的上下文），找出证明过程所需的其他前提条件。提取出这些前提条件，结合公式本身，对这个公式的证明或者推导过程进行提问，生成问题（希望生成的问题包含前提条件和该公式本身，从而使其他智能体不借助查看论文便能明白问题的内容，并作答）。\n第三步，将第二步中生成的问题，和第一步中提取的的证明推导过程进行一一对应的匹配，每一对作为一条数据，以jsonl的形式输出。其中每条数据为一个dict，包含3个key:value对。第一个key为公式类型，如'formula'、'lemma'、'theorem'等，value为latex格式的公式。第二个key为\"question\"，value为第二步生成的问题。第三个key为\"whole_proof\"，value为第一步提取到的包含latex格式内容的证明/推导过程。\n\n仅输出在第一步找到了证明或推导过程的数据！注意保证公式和原文相符！注意符号！注意上下标！注意大小写！"
-# response2 = model.generate_content([prompt2, sample_pdf], generation_config=genai.types.GenerationConfig(temperature=0.0,),request_options={"timeout": 600})
-# print(response2.text)
-# assert 0
