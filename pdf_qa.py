@@ -288,6 +288,7 @@ def generate_label(model, query:list, sample_pdf, output_file:str):
    - 若论文中没有任何与问题相关的内容，认为问题答案为“NO ANSWER.”，并在最后标注“evidence: NO EVIDENCE”, 即提取的答案为“NO ANSWER.\nevidence: NO EVIDENCE”。 
 
 在提取答案时，请注意以下要求：  
+- **数目不变**：每条数据都对应一条答案，不可出现增添数据量。
 - **完备性**：提取的答案内容需涵盖论文中解决问题所需的所有相关步骤和细节。  
 - **一致性**：在答案中仅保留原文内容（可作少量必要的衔接性编辑，但不改变原意），尽量避免额外添加未在原文出现的内容或描述。
 - **evidence**：在答案最后表明答案的来源（evidence：答案在论文中的位置）。
