@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="26.0.6">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0" version="26.0.6">
   <diagram name="Page-1" id="c7558073-3199-34d8-9f00-42111426c3f3">
-    <mxGraphModel dx="1026" dy="650" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="900" dy="573" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -27,36 +27,28 @@
             <mxPoint x="21" y="-19" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="27JTP-Sbx9DpBhJqMv6_-52" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="6" target="OM6LCN_4-8OB91uzV0C4-117" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="cXBgpp_wA3lKnXyNQ3RL-8" value="Query" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="27JTP-Sbx9DpBhJqMv6_-52">
-          <mxGeometry x="-0.2701" y="3" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="6" value="&lt;p style=&quot;margin: 0px; margin-top: 4px; text-align: center; text-decoration: underline;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Query Generator&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=middle;align=center;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=1;fontStyle=1;strokeWidth=3;fillColor=#E6FFCC" parent="1" vertex="1">
           <mxGeometry x="484.5" y="248" width="135.5" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="OM6LCN_4-8OB91uzV0C4-111" value="" style="elbow=horizontal;strokeColor=#990000;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
+        <mxCell id="OM6LCN_4-8OB91uzV0C4-111" value="" style="elbow=horizontal;strokeColor=#990000;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1" target="OM6LCN_4-8OB91uzV0C4-114">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
             <mxPoint x="750.25" y="338" as="sourcePoint" />
-            <mxPoint x="681" y="431.75" as="targetPoint" />
+            <mxPoint x="762" y="460" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="751" y="431.75" />
+              <mxPoint x="754" y="428" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="OM6LCN_4-8OB91uzV0C4-112" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Q&amp;amp;A: queries with&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&amp;nbsp;whole_label&lt;/font&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=left;verticalAlign=middle;resizable=0;points=[];" parent="OM6LCN_4-8OB91uzV0C4-111" vertex="1" connectable="0">
+        <mxCell id="OM6LCN_4-8OB91uzV0C4-112" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Q&amp;amp;A: queries and&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&amp;nbsp;whole_label&lt;/font&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=left;verticalAlign=middle;resizable=0;points=[];" parent="OM6LCN_4-8OB91uzV0C4-111" vertex="1" connectable="0">
           <mxGeometry x="-0.4177" y="4" relative="1" as="geometry">
             <mxPoint x="-2" y="18" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="OM6LCN_4-8OB91uzV0C4-114" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;Answer Filter&lt;/p&gt;" style="verticalAlign=middle;align=center;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=1;fontStyle=1;strokeWidth=3;fillColor=#E6FFCC" parent="1" vertex="1">
-          <mxGeometry x="566" y="383" width="115" height="90" as="geometry" />
+          <mxGeometry x="615" y="383" width="115" height="90" as="geometry" />
         </mxCell>
         <mxCell id="OM6LCN_4-8OB91uzV0C4-117" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;Context Collector&lt;/p&gt;" style="verticalAlign=middle;align=center;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=1;fontStyle=1;strokeWidth=3;fillColor=#E6FFCC" parent="1" vertex="1">
-          <mxGeometry x="327" y="383" width="115" height="90" as="geometry" />
+          <mxGeometry x="405" y="383" width="115" height="90" as="geometry" />
         </mxCell>
         <mxCell id="OM6LCN_4-8OB91uzV0C4-121" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;Answer Sequencer&lt;/p&gt;" style="verticalAlign=middle;align=center;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=1;fontStyle=1;strokeWidth=3;fillColor=#E6FFCC" parent="1" vertex="1">
           <mxGeometry x="96" y="383" width="115" height="90" as="geometry" />
@@ -70,18 +62,13 @@
         </mxCell>
         <mxCell id="OM6LCN_4-8OB91uzV0C4-124" value="&lt;font&gt;query&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=1;fontSize=12;" parent="OM6LCN_4-8OB91uzV0C4-123" vertex="1" connectable="0">
           <mxGeometry x="-0.09" y="2" relative="1" as="geometry">
-            <mxPoint x="3" y="-18" as="offset" />
+            <mxPoint x="4" y="-9" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="OM6LCN_4-8OB91uzV0C4-127" value="" style="elbow=horizontal;strokeColor=#990000;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="OM6LCN_4-8OB91uzV0C4-117" target="OM6LCN_4-8OB91uzV0C4-121" edge="1">
+        <mxCell id="OM6LCN_4-8OB91uzV0C4-127" value="" style="elbow=horizontal;strokeColor=#990000;strokeWidth=2;exitX=0.01;exitY=0.929;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" parent="1" source="6" target="OM6LCN_4-8OB91uzV0C4-121" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
             <mxPoint x="332" y="427.5" as="sourcePoint" />
             <mxPoint x="208" y="427.5" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="OM6LCN_4-8OB91uzV0C4-128" value="&lt;span style=&quot;font-size: 12px;&quot;&gt;Q&amp;amp;A with evidence&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="OM6LCN_4-8OB91uzV0C4-127" vertex="1" connectable="0">
-          <mxGeometry x="-0.4177" y="4" relative="1" as="geometry">
-            <mxPoint x="-27" y="-29" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="OM6LCN_4-8OB91uzV0C4-130" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;strokeColor=#990000;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" target="OM6LCN_4-8OB91uzV0C4-134" edge="1">
@@ -130,13 +117,10 @@
             <mxPoint x="442" y="428" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="NIxri_lN6JTQjKrFzoQm-40" value="&lt;span style=&quot;font-size: 12px;&quot;&gt;Q&amp;amp;A:&amp;nbsp;&lt;/span&gt;Proof or&amp;nbsp;&lt;div&gt;derivation type&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NIxri_lN6JTQjKrFzoQm-39" vertex="1" connectable="0">
+        <mxCell id="NIxri_lN6JTQjKrFzoQm-40" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Retain proof or&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;derivation-type&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;QA pairs&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-size: 12px; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;and filter&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;out other types.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NIxri_lN6JTQjKrFzoQm-39" vertex="1" connectable="0">
           <mxGeometry x="-0.4177" y="4" relative="1" as="geometry">
-            <mxPoint x="-27" y="-29" as="offset" />
+            <mxPoint x="-5" y="31" as="offset" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="NIxri_lN6JTQjKrFzoQm-53" value="&lt;div style=&quot;color: rgb(214, 214, 221); background-color: rgb(24, 24, 24); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; line-height: 19px; white-space: pre;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;color: rgb(130, 210, 206);&quot;&gt;&quot;arxiv&quot;&lt;/span&gt;:&lt;span style=&quot;color: rgb(227, 148, 220);&quot;&gt;&quot;2305.18290&quot;&lt;/span&gt;,&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;color: rgb(130, 210, 206);&quot;&gt;&quot;formula&quot;&lt;/span&gt;:&lt;span style=&quot;color: rgb(227, 148, 220);&quot;&gt;&quot;&lt;/span&gt;\\&lt;span style=&quot;color: rgb(227, 148, 220);&quot;&gt;latex format of formula 4&quot;&lt;/span&gt;,&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;color: rgb(130, 210, 206);&quot;&gt;&quot;query&quot;&lt;/span&gt;:&lt;span style=&quot;color: rgb(227, 148, 220);&quot;&gt;&quot;&quot;,&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;color: rgb(227, 148, 220);&quot;&gt;&lt;div style=&quot;color: rgb(214, 214, 221); line-height: 19px;&quot;&gt;&lt;span style=&quot;color: rgb(130, 210, 206);&quot;&gt;&quot;whole_label&quot;&lt;/span&gt;:&lt;span style=&quot;color: rgb(227, 148, 220);&quot;&gt;&quot;&lt;/span&gt;\\&lt;span style=&quot;color: rgb(227, 148, 220);&quot;&gt;entire answer extracted from paper&quot;&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1067" y="487" width="227.75" height="76" as="geometry" />
         </mxCell>
         <mxCell id="27JTP-Sbx9DpBhJqMv6_-38" value="&lt;div style=&quot;text-align: left; font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space-collapse: preserve; line-height: 19px;&quot;&gt;&lt;font style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: rgb(0, 0, 0); font-size: 27px;&quot;&gt;&lt;span&gt;&lt;b style=&quot;&quot;&gt;&lt;i style=&quot;&quot;&gt;                 Question:&lt;/i&gt;&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left; font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space-collapse: preserve; line-height: 19px;&quot;&gt;&lt;font style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;Based on the following equation: &lt;/span&gt;&lt;font style=&quot;color: light-dark(rgb(255, 20, 20), rgb(237, 237, 237));&quot;&gt;{&lt;/font&gt;&lt;font style=&quot;color: light-dark(rgb(249, 11, 11), rgb(237, 237, 237));&quot;&gt;latex format of formula 3}, &lt;/font&gt;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left; font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space-collapse: preserve; line-height: 19px;&quot;&gt;&lt;font style=&quot;font-size: 18px; color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;b&gt;please prove that the optimal &lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;b style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 18px;&quot;&gt;solution to &lt;/b&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 18px;&quot;&gt;the reward maximization objective &lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left; font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space-collapse: preserve; line-height: 19px;&quot;&gt;&lt;font style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;under the KL constraint in the equation above is:&lt;/span&gt;&lt;font style=&quot;color: rgb(255, 12, 28);&quot;&gt;{&lt;/font&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 18px; color: rgb(255, 12, 28);&quot;&gt;lat&lt;/font&gt;&lt;font style=&quot;font-size: 18px; color: rgb(255, 17, 25);&quot;&gt;ex format of formula 4}&lt;/font&gt;&lt;span style=&quot;color: light-dark(rgb(227, 148, 220), rgb(140, 72, 134)); font-size: 8px;&quot;&gt; &lt;/span&gt;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="823" y="248" width="844" height="98" as="geometry" />
@@ -170,6 +154,23 @@
         </mxCell>
         <mxCell id="27JTP-Sbx9DpBhJqMv6_-57" value="&lt;font style=&quot;font-size: 27px; color: rgb(0, 0, 0);&quot;&gt;&lt;b&gt;&lt;i&gt;&lt;span&gt;Whole_label&lt;/span&gt;:&lt;/i&gt;&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 27px; color: rgb(0, 0, 0);&quot;&gt;E&lt;span&gt;ntire answer extracted from paper&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="958.5" y="123" width="440" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="bEbAe3Z4ms0xXpTPi_pI-10" value="" style="elbow=horizontal;strokeColor=#990000;strokeWidth=2;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="OM6LCN_4-8OB91uzV0C4-117" target="6">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="711.5" y="504" as="sourcePoint" />
+            <mxPoint x="616.5" y="504" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bEbAe3Z4ms0xXpTPi_pI-11" value="&lt;span style=&quot;font-size: 12px;&quot;&gt;Q&amp;amp;A with context&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bEbAe3Z4ms0xXpTPi_pI-10">
+          <mxGeometry x="-0.4177" y="4" relative="1" as="geometry">
+            <mxPoint x="56" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bEbAe3Z4ms0xXpTPi_pI-12" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;new Q&amp;amp;A(questions and&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&amp;nbsp;whole_label)&lt;/font&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=left;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="266.00034026787137" y="425.0048692331989" as="geometry" />
+        </mxCell>
+        <mxCell id="bEbAe3Z4ms0xXpTPi_pI-13" value="&lt;div style=&quot;text-align: left; font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space-collapse: preserve; line-height: 19px;&quot;&gt;&lt;font style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: rgb(0, 0, 0); font-size: 27px;&quot;&gt;&lt;span&gt;&lt;b style=&quot;&quot;&gt;&lt;i style=&quot;&quot;&gt;                 Context:&lt;/i&gt;&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left; font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space-collapse: preserve; line-height: 19px;&quot;&gt;&lt;font style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;Based on the following equation: &lt;/span&gt;&lt;font style=&quot;color: light-dark(rgb(255, 20, 20), rgb(237, 237, 237));&quot;&gt;{&lt;/font&gt;&lt;font style=&quot;color: light-dark(rgb(249, 11, 11), rgb(237, 237, 237));&quot;&gt;latex format of formula 3}, &lt;/font&gt;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left; font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space-collapse: preserve; line-height: 19px;&quot;&gt;&lt;font style=&quot;font-size: 18px; color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;b&gt;please prove that the optimal &lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;b style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 18px;&quot;&gt;solution to &lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left; font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space-collapse: preserve; line-height: 19px;&quot;&gt;&lt;b style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 18px;&quot;&gt;the reward maximization objective &lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left; font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space-collapse: preserve; line-height: 19px;&quot;&gt;&lt;font style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;under the KL constraint in the equation above is:&lt;/span&gt;&lt;font style=&quot;color: rgb(255, 12, 28);&quot;&gt;{&lt;/font&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 18px; color: rgb(255, 12, 28);&quot;&gt;lat&lt;/font&gt;&lt;font style=&quot;font-size: 18px; color: rgb(255, 17, 25);&quot;&gt;ex format of formula 4}&lt;/font&gt;&lt;span style=&quot;color: light-dark(rgb(227, 148, 220), rgb(140, 72, 134)); font-size: 8px;&quot;&gt; &lt;/span&gt;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="845" y="220" width="775" height="124" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
