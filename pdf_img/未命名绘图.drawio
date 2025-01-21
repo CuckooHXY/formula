@@ -51,7 +51,7 @@
           <mxGeometry x="392.5" y="304" width="115" height="90" as="geometry" />
         </mxCell>
         <mxCell id="OM6LCN_4-8OB91uzV0C4-121" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;Answer Sequencer&lt;/p&gt;" style="verticalAlign=middle;align=center;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=1;fontStyle=1;strokeWidth=3;fillColor=#E6FFCC" parent="1" vertex="1">
-          <mxGeometry x="107.5" y="302" width="115" height="90" as="geometry" />
+          <mxGeometry x="166" y="309" width="115" height="90" as="geometry" />
         </mxCell>
         <mxCell id="OM6LCN_4-8OB91uzV0C4-123" value="" style="elbow=horizontal;strokeColor=#990000;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="6" target="8" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
@@ -71,27 +71,23 @@
             <mxPoint x="219.5" y="346.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="OM6LCN_4-8OB91uzV0C4-130" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;strokeColor=#990000;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" target="OM6LCN_4-8OB91uzV0C4-134" edge="1">
+        <mxCell id="OM6LCN_4-8OB91uzV0C4-130" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;strokeColor=#990000;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" target="OM6LCN_4-8OB91uzV0C4-134" edge="1" source="OM6LCN_4-8OB91uzV0C4-121">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
             <mxPoint x="164.5" y="392" as="sourcePoint" />
             <mxPoint x="164.5" y="523" as="targetPoint" />
             <Array as="points">
+              <mxPoint x="200" y="427" />
               <mxPoint x="164" y="451" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="OM6LCN_4-8OB91uzV0C4-131" value="&lt;span style=&quot;font-size: 12px;&quot;&gt;sub_label(step by step)&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];textDirection=ltr;labelPosition=center;verticalLabelPosition=middle;" parent="OM6LCN_4-8OB91uzV0C4-130" vertex="1" connectable="0">
-          <mxGeometry x="0.1908" y="-1" relative="1" as="geometry">
-            <mxPoint x="70" y="-24" as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="OM6LCN_4-8OB91uzV0C4-134" value="&lt;font style=&quot;color: rgb(51, 51, 255);&quot;&gt;Expert evaluation and Feedback&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="105" y="512" width="120" height="60" as="geometry" />
+          <mxGeometry x="163.5" y="468" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="OM6LCN_4-8OB91uzV0C4-135" value="" style="edgeStyle=none;noEdgeStyle=1;strokeColor=#990000;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="OM6LCN_4-8OB91uzV0C4-134" target="OM6LCN_4-8OB91uzV0C4-137" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="232.5" y="549" as="sourcePoint" />
-            <mxPoint x="352.5" y="542" as="targetPoint" />
+            <mxPoint x="283.5" y="491" as="sourcePoint" />
+            <mxPoint x="428.75" y="500" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="OM6LCN_4-8OB91uzV0C4-136" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;data with feedback&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="OM6LCN_4-8OB91uzV0C4-135" vertex="1" connectable="0">
@@ -100,16 +96,16 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="OM6LCN_4-8OB91uzV0C4-137" value="&lt;font style=&quot;color: rgb(51, 51, 255);&quot;&gt;Data Modification and Refinement&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="345.5" y="512" width="120" height="60" as="geometry" />
+          <mxGeometry x="421.75" y="470" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="OM6LCN_4-8OB91uzV0C4-138" value="" style="edgeStyle=none;noEdgeStyle=1;strokeColor=#990000;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="OM6LCN_4-8OB91uzV0C4-137" target="OM6LCN_4-8OB91uzV0C4-140" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="482.5" y="541.5" as="sourcePoint" />
-            <mxPoint x="602.5" y="541.5" as="targetPoint" />
+            <mxPoint x="558.75" y="499.5" as="sourcePoint" />
+            <mxPoint x="678.75" y="499.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="OM6LCN_4-8OB91uzV0C4-140" value="final data" style="whiteSpace=wrap;align=center;verticalAlign=middle;fontStyle=1;strokeWidth=3;fillColor=#FFFFCC" parent="1" vertex="1">
-          <mxGeometry x="552.5" y="512" width="90" height="60" as="geometry" />
+          <mxGeometry x="628.75" y="470" width="90" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NIxri_lN6JTQjKrFzoQm-39" value="" style="elbow=horizontal;strokeColor=#990000;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="OM6LCN_4-8OB91uzV0C4-114" target="OM6LCN_4-8OB91uzV0C4-117" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
@@ -176,7 +172,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="bEbAe3Z4ms0xXpTPi_pI-12" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Questions&lt;br&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=left;verticalAlign=middle;resizable=0;points=[];" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="262.50034026787137" y="336.0048692331989" as="geometry" />
+          <mxGeometry x="301.00034026787137" y="309.0048692331989" as="geometry" />
         </mxCell>
         <mxCell id="bEbAe3Z4ms0xXpTPi_pI-13" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space-collapse: preserve; line-height: 19px;&quot;&gt;&lt;font style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: rgb(0, 0, 0); font-size: 27px;&quot;&gt;&lt;span&gt;&lt;b style=&quot;&quot;&gt;&lt;i style=&quot;&quot;&gt;Evidence:&lt;/i&gt;&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;span style=&quot;font-size: 27px;&quot;&gt;Context related to query extracted from paper&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="915.5" y="263" width="563" height="60" as="geometry" />
@@ -198,6 +194,9 @@
         </mxCell>
         <mxCell id="d4NwzYxdG5bXWg3SmN4R-12" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;text-wrap-mode: nowrap; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 27px;&quot;&gt;&lt;i style=&quot;&quot;&gt;sub label(step-by-step)&lt;/i&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;step 1&lt;/b&gt;:&lt;span style=&quot;background-color: transparent;&quot;&gt;Analogously to Eq. \ref{eq:RL}, we optimize the following objective:&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;……&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;\max_{\pi}&amp;nbsp; \mathbb{E}_{x\sim \mathcal{D}, y\sim \pi}\bigl[r(x, y)\bigr] - \beta\mathbb{D}_{\textrm{KL}}\bigl[\pi(y|x)||\piref(y|x)\bigr]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;……&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;step 4:&lt;/b&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;We can now define&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;\begin{equation*}&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;……&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;which is a valid probability distribution as $\pi^*(y|x)\geq 0$ for all $y$ and $\sum_{y}\pi^*(y|x)=1$. Since $Z(x)$ is not a function of $y$, we can then re-organize the final objective in Eq \ref{eq:RL_proof} as:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;……&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;step 7:&lt;/b&gt;&amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;\begin{equation}&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;\pi(y|x)= \pi^*(y|x) = \frac{1}{Z(x)}\piref(y|x)\exp\left(\frac{1}{\beta}r(x, y)\right)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;\end{equation}&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;for all $x\in\mathcal{D}$. This completes the derivation.&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
           <mxGeometry x="1551" y="7" width="587" height="652" as="geometry" />
+        </mxCell>
+        <mxCell id="XW4mDZATonfvS0nD0W49-13" value="&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;sub label(step by step)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="237.5" y="421" width="139" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
