@@ -93,7 +93,7 @@
         </mxCell>
         <mxCell id="OM6LCN_4-8OB91uzV0C4-131" value="&lt;span style=&quot;font-size: 12px;&quot;&gt;QA with label step by step&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];textDirection=ltr;labelPosition=center;verticalLabelPosition=middle;" parent="OM6LCN_4-8OB91uzV0C4-130" vertex="1" connectable="0">
           <mxGeometry x="0.1908" y="-1" relative="1" as="geometry">
-            <mxPoint x="78" y="-4" as="offset" />
+            <mxPoint x="78" y="6" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="OM6LCN_4-8OB91uzV0C4-134" value="&lt;font style=&quot;color: rgb(51, 51, 255);&quot;&gt;Expert evaluation and Feedback&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
@@ -134,7 +134,7 @@
             <mxPoint x="442" y="428" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="NIxri_lN6JTQjKrFzoQm-40" value="&lt;span style=&quot;font-size: 12px;&quot;&gt;Q&amp;amp;A:&amp;nbsp;derivation&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;or&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 12px; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;proof&lt;/span&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="NIxri_lN6JTQjKrFzoQm-39">
+        <mxCell id="NIxri_lN6JTQjKrFzoQm-40" value="&lt;span style=&quot;font-size: 12px;&quot;&gt;Q&amp;amp;A:&amp;nbsp;&lt;/span&gt;Proof or&amp;nbsp;&lt;div&gt;derivation type&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="NIxri_lN6JTQjKrFzoQm-39">
           <mxGeometry x="-0.4177" y="4" relative="1" as="geometry">
             <mxPoint x="-27" y="-29" as="offset" />
           </mxGeometry>
@@ -167,6 +167,11 @@
             <Array as="points">
               <mxPoint x="760" y="190" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NIxri_lN6JTQjKrFzoQm-61" value="&lt;font&gt;questions&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=1;fontSize=12;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="770" y="170" as="geometry">
+            <mxPoint x="4.156462438561116" y="8.928819630658387" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
