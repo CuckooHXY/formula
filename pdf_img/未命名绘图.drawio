@@ -170,7 +170,7 @@
           <mxGeometry x="266.00034026787137" y="425.0048692331989" as="geometry" />
         </mxCell>
         <mxCell id="bEbAe3Z4ms0xXpTPi_pI-13" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space-collapse: preserve; line-height: 19px;&quot;&gt;&lt;font style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: rgb(0, 0, 0); font-size: 27px;&quot;&gt;&lt;span&gt;&lt;b style=&quot;&quot;&gt;&lt;i style=&quot;&quot;&gt;Context:&lt;/i&gt;&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;span style=&quot;font-size: 27px;&quot;&gt;Context related to query extracted from paper&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="845" y="398" width="775" height="124" as="geometry" />
+          <mxGeometry x="809.5" y="231" width="775" height="124" as="geometry" />
         </mxCell>
         <mxCell id="bEbAe3Z4ms0xXpTPi_pI-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
