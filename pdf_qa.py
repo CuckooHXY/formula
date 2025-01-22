@@ -302,7 +302,7 @@ def generate_label(model, query:list, sample_pdf, output_file:str):
 ---
 
 ### 第二步：  
-**JSONL 输出：** 将第一步中提取的答案以多行 JSONL 格式输出，方便逐行解析。每行都是一个 JSON 对象，其中 key 为`whole_label`，value 为第一步中从论文中提取的 LaTeX 格式的答案内容，并且需要在答案最后表明答案的来源（evidence：答案所在位置）；
+**JSONL 输出：** 将第一步中提取的答案以多行 JSONL 格式输出，方便逐行解析。每行都是一个 JSON 对象，原来的内容保持不变，不可以增补、删除、修改；另外新增一个键值对，其中 key 为`whole_label`，value 为第一步中从论文中提取的 LaTeX 格式的答案内容，并且需要在答案最后表明答案的来源（evidence：答案所在位置）；
 
 ---
 
