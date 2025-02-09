@@ -83,7 +83,7 @@ Ensure the formulas are exactly the same as in the original text!"""
     with open(output_file, 'w', encoding='utf-8') as file:
         for item in latex_formulas:
             file.write(item + '\n')
-    assert 0
+    # assert 0
     # assert 0
     return latex_formulas
     formulas = "\n".join(latex_formulas)
@@ -401,31 +401,32 @@ if __name__ == '__main__':
 #     recipe_name: str
 #     ingredients: list[str]
     start = time.time()
-    output_dir = "E:\\dmt\\formula\\generated\\1-8"
+    # output_dir = "E:\\dmt\\formula\\generated\\1-8"
     parser = argparse.ArgumentParser()
-    parser.add_argument('--pdf_path', type=str, default="E:\dmt\\formula\papers\diffcsp.pdf", help='the input file path')
+    parser.add_argument('--pdf_path', type=str, default="E:\dmt\\formula\\Direct Preference Optimization--Your Language Model is Secretly a Reward Mode.pdf", help='the input file path')
     parser.add_argument('--model_name', type=str, default="gemini-2.0-flash-exp", help='the gemini model you want to use.')
-    parser.add_argument('--output_jsonl_path', type=str, default="E:\\dmt\\formula\\generated\\1-8\\api_dpo_label.jsonl", help='output path')
+    parser.add_argument('--output_dir', type=str, default="E:\\dmt\\formula\\generated", help='output dir')
     args = parser.parse_args()
-    args.output_jsonl_path = os.path.join(output_dir, "api_"+args.pdf_path.split('\\')[-1][:-4]+"_label.jsonl")
+    # args.output_jsonl_path = os.path.join(output_dir, "api_"+args.pdf_path.split('\\')[-1][:-4]+"_label.jsonl")
     print("pdf: " + args.pdf_path)
     print("model: " + args.model_name)
-    print("output_jsonl_path: " + args.output_jsonl_path)
+    print("output_dir: " + args.output_dir)
 
     genai.configure(api_key="AIzaSyC3hUut2AKGPAsRE7MN-s0LecjOEdg2bcg")
     model = genai.GenerativeModel(args.model_name)
     # model3 = genai.GenerativeModel("gemini-2.0-flash-thinking-exp")
     sample_pdf = genai.upload_file(args.pdf_path)
     prepare = time.time()
-    formula_path = os.path.join(output_dir, "api_"+args.pdf_path.split('\\')[-1][:-4]+"_formula.jsonl")
+    formula_path = os.path.join(args.output_dir, "api_"+args.pdf_path.split('\\')[-1][:-4]+"_formula.jsonl")
     print(formula_path)
     formulas = extract_formula(model, sample_pdf, formula_path)
     formulas_time = time.time()
     # qa = generate_question_label(formulas, args.output_jsonl_path, sample_pdf)
-    query_path = os.path.join(output_dir, "api_"+args.pdf_path.split('\\')[-1][:-4]+"_query.jsonl")
+    query_path = os.path.join(args.output_dir, "api_"+args.pdf_path.split('\\')[-1][:-4]+"_query.jsonl")
     query = generate_query(model, formulas, sample_pdf, query_path)
     query_time = time.time()
-    label = generate_label(model, query, sample_pdf, args.output_jsonl_path)
+    QA_path = os.path.join(args.output_dir, "api_"+args.pdf_path.split('\\')[-1][:-4]+"_QA.jsonl")
+    label = generate_label(model, query, sample_pdf, QA_path)
     label_time = time.time()
     print(f"Time to configure model and upload file: {prepare - start:.2f} seconds")
     print(f"Time to extract formulas: {formulas_time - prepare:.2f} seconds")
